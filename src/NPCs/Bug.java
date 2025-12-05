@@ -19,7 +19,7 @@ public class Bug extends NPC {
     private float speed = 1;
     
     public Bug(int id, Point location) {
-        super(id, location.x, location.y, new SpriteSheet(ImageLoader.load("Bug.png"), 24, 15), "WALK_RIGHT");
+        super(id, location.x, location.y, new SpriteSheet(ImageLoader.load("Images/Bug.png"), 24, 15), "WALK_RIGHT");
     }
 
     // this code makes the bug npc walk back and forth (left to right)

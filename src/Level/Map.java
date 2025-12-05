@@ -2,6 +2,7 @@ package Level;
 
 import Engine.Config;
 import Engine.GraphicsHandler;
+import Engine.ImageLoader;
 import Engine.ScreenManager;
 import GameObject.Rectangle;
 import Utils.Direction;
@@ -11,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -124,10 +126,11 @@ public abstract class Map {
     // reads in a map file to create the map's tilemap
     private void loadMapFile() {
         Scanner fileInput;
-        try {
+        InputStream fileStream = ImageLoader.class.getResourceAsStream(Config.MAP_FILES_PATH + this.mapFileName);
+        if (fileStream != null) {
             // open map file that is located in the MAP_FILES_PATH directory
-            fileInput = new Scanner(new File(Config.MAP_FILES_PATH + this.mapFileName));
-        } catch(FileNotFoundException ex) {
+            fileInput = new Scanner(fileStream);
+        } else {
             // if map file does not exist, create a new one for this map (the map editor uses this)
             System.out.println("Map file " + Config.MAP_FILES_PATH + this.mapFileName + " not found! Creating empty map file...");
 

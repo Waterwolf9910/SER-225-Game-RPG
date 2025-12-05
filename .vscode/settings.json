@@ -1,0 +1,23 @@
+{
+    "java.signatureHelp.description.enabled": true,
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.compile.nullAnalysis.nullable": [
+        "org.jetbrains.annotations.Nullable",
+        "javax.annotation.Nullable",
+        "org.eclipse.jdt.annotation.Nullable",
+        "org.springframework.lang.Nullable"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.compile.nullAnalysis.nonnull": [
+        "org.jetbrains.annotations.NotNull",
+        "javax.annotation.Nonnull",
+        "org.eclipse.jdt.annotation.NonNull",
+        "org.springframework.lang.NonNull"
+    ],
+    "java.compile.nullAnalysis.nonnullbydefault": [
+        "org.jetbrains.annotations.NotNullByDefault",
+        "javax.annotation.ParametersAreNonnullByDefault",
+        "org.eclipse.jdt.annotation.NonNullByDefault",
+        "org.springframework.lang.NonNullApi"
+    ],
+}
